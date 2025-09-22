@@ -20,11 +20,19 @@ app.use(express.static("public"))
 app.use(cookieParser());
 
 
+// routes  
 
+                                            //(RECAP KRR CAUSE SHOULD HV RUN HERE BUT INDEX ME RUN HO RHA HAI)
 
+import userRouter from "./routes/user.routes.js";
 
+app.get("/health",()=>{
+  console.log("Health is ok");
+ })
 
-
+// routes declaration
+ app.use("/api/v1/users", userRouter);
+             // it will make route like https://localhoat:8000/api/v1/users/register
 
 
 
